@@ -1,0 +1,22 @@
+html
+    head 
+        title !{title}
+
+        //- link directly to the css folder in input, no sass compile required
+        //link(rel="stylesheet", href="/css/test.css")
+
+        //- CDN just for external test 
+        link(rel="stylesheet", href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma-rtl.min.css")
+            
+        //- Use this css call if you're using a CDN.
+        //- link(rel="stylesheet", href="/css/style.css")
+    body         
+        section
+            block the_content
+
+        block collection_content
+
+        block pagination
+
+        footer 
+            p Footer
