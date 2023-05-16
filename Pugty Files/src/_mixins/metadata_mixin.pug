@@ -1,0 +1,53 @@
+
+mixin meta_basic (description="",author="",keywords="")
+    meta(charset="UTF-8")
+
+    meta(name="description" content=description)
+    meta(name="author" content=author)
+    meta(name="keywords" content=keywords)
+
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+
+mixin meta_favicon(icon_16="",icon_32="",apple_icon="")
+    //-This is going with default dimensions. Feel free to modify that in the fucntion if you need to
+
+    link(rel="icon" type="image/png" sizes="16x16" href=icon_16)
+    link(rel="icon" type="image/png" sizes="32x32" href=icon_32)
+    //- No, idk why apple has to be different from base 8.
+    link(rel="apple-touch-icon",sizes="180x180",href=apple_icon)
+
+mixin meta_facebook(my_site="", site_title="", site_descript="", thumb_url="", site_type=website)
+    // Facebook Card Metadata 
+    meta(property="og:url" content=my_site)
+    meta(property="og:title" content=site_title)
+    meta(property="og:description" content=site_descript)
+    meta(property="og:image" content=thumb_url)
+    meta(property="og:type" content=site_type)
+
+mixin meta_twitter(tweeter_username="", my_url="",site_title="", site_descript="", thumb_url="",card_type="summary_large_image")
+
+    // Twitter Meta Tags
+    
+    meta(property="og:url" content=my_url)
+    meta(name="twitter:site" content=tweeter_username)
+    meta(property="twitter:title" content=site_title)
+    meta(property="twitter:description" content=site_descript)
+    meta(property="twitter:image" content=thumb_url)
+    meta(property="twitter:card" content=card_type)
+
+mixin meta_manifest(manifest_url="/site.webmanifest")
+    link(rel="manifest" href=manifest_url)
+
+mixin meta_bots(content_type="all")
+    //- insert medabots pun here
+    meta(name="robots" content="")
+
+mixin meta_revision(revision_date="")
+    meta(name="revised" content=revision_date)
+
+
+//- Friendly Suggestions
+//- If you are having trouble filling those tags, I recommend https://www.opengraph.xyz to do the job for you, they're great.
+//- If you need help (welcome to the club), here: https://www.digitalocean.com/community/tutorials/how-to-add-twitter-card-and-open-graph-social-metadata-to-your-webpage-with-html
+
+
